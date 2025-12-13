@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+
+# Solicitar base y exponente al usuario
+base = float(input("Introduce la base: "))
+exponente = float(input("Introduce el exponente: "))
+
+# 1. Usando el operador **
+potencia_asteriscos = base ** exponente
+print(f"Usando **: {base} elevado a {exponente} es {potencia_asteriscos}")
+
+# 2. Usando la función integrada pow()
+potencia_pow = pow(base, exponente)
+print(f"Usando pow(): {base} elevado a {exponente} es {potencia_pow}")
+
+# 3. Usando math.pow()
+import math
+potencia_math = math.pow(base, exponente)
+print(f"Usando math.pow(): {base} elevado a {exponente} es {potencia_math}")
+
+# Ejemplo de pow() con módulo (para números enteros)
+if base == int(base) and exponente == int(exponente):
+    modulo = int(input("Introduce un módulo para pow(base, exponente, modulo): "))
+    potencia_modulo = pow(int(base), int(exponente), modulo)
+    print(f"Usando pow(base, exponente, modulo): ({int(base)}^{int(exponente)}) % {modulo} es {potencia_modulo}")
+
