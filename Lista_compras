@@ -1,0 +1,21 @@
+def crear_lista_compras():
+    lista_compras = []
+    print("¡Bienvenido al Creador de Listas de Compras!")
+    print("Escribe 'fin' para terminar.")
+
+    while True:
+        producto = input("Introduce un producto: ")
+        if producto.lower() == "fin":
+            break  # Sale del bucle si el usuario escribe 'fin'
+        lista_compras.append(producto) # Añade el producto a la lista
+
+    print("\n--- Tu Lista de Compras ---")
+    if not lista_compras:
+        print("No has agregado ningún producto a la lista.")
+    else:
+        for item in lista_compras:
+            print(f"- {item}") # Muestra cada producto de la lista
+
+# Llama a la función para ejecutar el programa
+crear_lista_compras()
+    
