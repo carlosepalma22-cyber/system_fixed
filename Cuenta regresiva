@@ -1,0 +1,11 @@
+import time
+
+def cuenta_regresiva_segundos(segundos):
+    print(f"Iniciando cuenta regresiva desde {segundos} segundos...")
+    while segundos > 0:
+        print(segundos)
+        time.sleep(1) # Pausa de 1 segundo
+        segundos -= 1 # Decrementa el contador
+    print("¡Tiempo agotado!")
+
+cuenta_regresiva_segundos(5) # Inicia la cuenta desde 5
