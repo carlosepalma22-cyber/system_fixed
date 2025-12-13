@@ -1,0 +1,16 @@
+# 1. Pedir al usuario cuántos elementos quiere
+# La función input() lee texto, por eso usamos int() para convertirlo a número
+cantidad_elementos = int(input("¿Cuántos elementos deseas ingresar? "))
+
+# 2. Crear una lista para almacenar los elementos
+elementos = []
+
+# 3. Usar un bucle para pedir cada elemento
+for i in range(cantidad_elementos):
+    # Pedir el elemento y añadirlo a la lista
+    elemento = input(f"Ingresa el elemento {i+1}: ")
+    elementos.append(elemento)
+
+# 4. Mostrar la lista y su longitud
+print(f"\nLa lista creada es: {elementos}")
+print(f"La cantidad de elementos en la lista es: {len(elementos)}")
