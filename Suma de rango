@@ -1,0 +1,17 @@
+# Ejemplo 1: Sumar un rango de números (1 a 10)
+inicio = 1
+fin = 10
+suma_rango = sum(range(inicio, fin + 1))
+print(f"La suma de {inicio} a {fin} es: {suma_rango}") # Salida: 55
+
+# Ejemplo 2: Sumar elementos de una lista
+numeros = [10, 20, 30, 40]
+suma_lista = sum(numeros)
+print(f"La suma de la lista es: {suma_lista}") # Salida: 100
+
+# Ejemplo 3: Sumar números pares en un rango usando un bucle
+suma_pares = 0
+for i in range(1, 11):
+    if i % 2 == 0:
+        suma_pares += i
+print(f"La suma de números pares del 1 al 10 es: {suma_pares}") # Salida: 30
