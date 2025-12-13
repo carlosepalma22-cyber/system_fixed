@@ -1,0 +1,21 @@
+while True:
+    print("\n--- Menú Principal ---")
+    print("1. Saludar")
+    print("2. Mostrar fecha")
+    print("3. Salir")
+
+    opcion = input("Selecciona una opción (1-3): ")
+
+    if opcion == '1':
+        print("¡Hola! Bienvenido al menú interactivo.")
+    elif opcion == '2':
+        # Importa y muestra la fecha actual
+        from datetime import date
+        hoy = date.today()
+        print(f"La fecha de hoy es: {hoy}")
+    elif opcion == '3':
+        print("¡Adiós! Saliendo del programa.")
+        break # Sale del bucle while
+    else:
+        print("Opción no válida. Por favor, intenta de nuevo.")
+
