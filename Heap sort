@@ -1,0 +1,30 @@
+def heapify(lista, n, i):
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2
+
+    # Verifica si el hijo izquierdo existe y es mayor que la raíz
+    if l < n and lista[i] < lista[l]:
+        largest = l
+
+    # Verifica si el hijo derecho existe y es mayor que el mayor actual
+    if r < n and lista[largest] < lista[r]:
+        largest = r
+
+    # Cambia la raíz si es necesario
+    if largest != i:
+        lista[i], lista[largest] = lista[largest], lista[i]
+        heapify(lista, n, largest)
+
+def heap_sort(lista):
+    n = len(lista)
+
+    # Construir el montículo (maxheap)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(lista, n, i)
+
+    # Extraer elementos uno por uno
+    for i in range(n-1, 0, -1):
+        lista[i], lista[0] = lista[0], lista[i]
+        heapify(lista, i, 0)
+    return lista
