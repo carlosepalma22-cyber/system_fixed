@@ -1,0 +1,8 @@
+def quick_sort(lista):
+    if len(lista) <= 1:
+        return lista
+    pivote = lista[len(lista) // 2]
+    izq = [x for x in lista if x < pivote]
+    centro = [x for x in lista if x == pivote]
+    der = [x for x in lista if x > pivote]
+    return quick_sort(izq) + centro + quick_sort(der)
